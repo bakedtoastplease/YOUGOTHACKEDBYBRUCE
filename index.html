@@ -10,15 +10,18 @@
       margin:0;
       background:#000;
       font-family: Inter, Roboto, Arial, sans-serif;
-      animation: invertColors 1s infinite;
+      animation: invertColors 0.5s infinite steps(1, end);
     }
 
     @keyframes invertColors {
-      0%, 100% {
+      0% {
         filter: invert(0);
       }
       50% {
         filter: invert(1);
+      }
+      100% {
+        filter: invert(0);
       }
     }
 
