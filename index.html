@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YOU GOT HACKED</title>
+  <style>
+    /* Full-page black background */
+    html,body{
+      height:100%;
+      margin:0;
+      background:#000;
+      font-family: Inter, Roboto, Arial, sans-serif;
+    }
+
+    /* Centering container */
+    .stage{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+      box-sizing:border-box;
+    }
+
+    /* Content box keeps text over the image */
+    .content{
+      position:relative;
+      text-align:center;
+      max-width:1000px;
+      width:100%;
+    }
+
+    /* Responsive image */
+    .content img{
+      display:block;
+      width:100%;
+      height:auto;
+      border-radius:8px;
+      box-shadow:0 8px 30px rgba(0,0,0,0.6);
+    }
+
+    /* Big centered overlay text */
+    .overlay{
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      color:#ff214d;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.8), 0 0 30px rgba(255,33,77,0.12);
+      font-weight:900;
+      letter-spacing:2px;
+      line-height:1.05;
+      pointer-events:none;
+      white-space:nowrap;
+      font-size:calc(18px + 4vw);
+    }
+
+    /* Make sure overlay text stays readable on small screens */
+    @media (max-width:420px){
+      .overlay{font-size:24px; padding:0 8px; white-space:normal;}
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <div class="content">
+      <!-- Place your image file named "image.png" in the same folder as this HTML file -->
+      <img src="image.png" alt="image" />
+      <div class="overlay">YOU GOT HACKED BY BRUCE!! AHAHAH</div>
+    </div>
+  </div>
+</body>
+</html>
